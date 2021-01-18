@@ -8,5 +8,3 @@ class Seller < User
         @@users.select{|user| user.role == 'seller'}
     end
 end
-
-puts Seller.find_seller.to_s

@@ -7,4 +7,4 @@ class Buyer < User
         @@users.select{|user| user.role == 'buyer'}
     end
 end
-puts Buyer.find_buyer.to_s
+

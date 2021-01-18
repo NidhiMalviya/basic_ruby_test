@@ -22,9 +22,8 @@ class Product
   end
 
   def self.all_products
-    @@products.inspect
+    @@products
   end
 end
 
 Product.load_data
-puts Product.all_products

@@ -1,0 +1,12 @@
+GEM
+  specs:
+    table_print (1.5.7)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  table_print
+
+BUNDLED WITH
+   1.17.2
