@@ -1,10 +1,30 @@
+require './data.rb'
+require 'date'
+require 'pry'
+
+
 class Product
-    def initialize(product_name,seller_name,price,category)
-        @product = product
-        @seller_name = seller_name
-        @price = price
-        @category = category
+  include RawData
+  attr_accessor :name, :seller, :price, :category
+  @@products = []
+
+  def self.load_data
+    PRODUCTS.each do |product|
+      @@products << Product.new(product)
     end
-    obj =Product.new('bicycle','alax','3000','vehicle')
-    puts obj
+  end
+
+  def initialize(product)
+    @name = product[:name]
+    @seller = product[:seller]
+    @price = product[:price]
+    @category = product[:category]
+  end
+
+  def self.all_products
+    @@products.inspect
+  end
 end
+
+Product.load_data
+puts Product.all_products
